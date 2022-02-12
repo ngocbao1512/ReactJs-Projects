@@ -1,0 +1,94 @@
+.App {
+  display : flex;
+  align-items : center;
+  justify-content : center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+#wrapper {
+    min-height : 80vh;
+    min-width : 40vw;
+    background-image : linear-gradient(225deg,rgba(226, 116, 220, 0.342),rgba(151, 83, 172, 0.281),rgba(219, 138, 62, 0.486));
+    border-radius :  25px;  
+}
+
+.input, .button-add {
+  min-height : 70px;
+  border : none;
+  background-color: rgba(174, 175, 168, 0.507);
+  margin : 5px;
+  border-radius : 15px;
+  font-size : 24px;
+  color : white;
+  font-weight: bold;
+  margin-top : 40px;
+}
+
+.input {
+  min-width : 460px;
+  font-size : 32px;
+  margin-left : 80px;
+  outline : none;
+  padding-left : 20px;
+
+}
+
+.job-render { 
+  background-color: rgba(174, 175, 168, 0.507);
+  height : 60vh;
+  max-width : 30vw;
+  margin-left : 83px;
+  border-radius : 10px;
+  text-align: center;
+  padding-top : 10px;
+}
+
+.job {
+  list-style: none;
+  height : 8vh;
+  width : 28vw;
+  background-color: rgba(165, 188, 194, 0.452);
+  box-shadow: #282c347c;
+  margin-top : 4px;
+  border-radius : 12px;
+  color : white;
+  font-size : 24px;
+  font-weight : bold;
+  text-align: center;
+  line-height: 8vh;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
