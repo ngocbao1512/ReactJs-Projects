@@ -1,15 +1,45 @@
 import './App.css'
 import { useState } from 'react'
+import ButtonDelete from './component/ButtonDelete'
 
 function App() {
+
   const [job, setJob] = useState('');
-  const [jobs, setJobs] = useState([]);
+  const [jobs, setJobs] = useState(() => { 
+    const storageJobs = JSON.parse(localStorage.getItem('jobs')) ?? []
+    return storageJobs 
+  });
 
   const handleClick = () => {
-    setJobs(prev => [...prev, job])
+    console.log("ok");
+    setJobs(prev => {
+      const newJobs = [...prev, job];
+
+      const jsonJobs = JSON.stringify(newJobs)
+
+      localStorage.setItem('jobs', jsonJobs)
+
+      console.dir(jsonJobs)
+
+      return [...prev, job];
+    })
+    setJob('')
   }
 
- 
+
+  const deleteJob = (job) => {
+
+    console.log("ok");  
+    setJobs(prev => {
+      const newJobs1 = prev.filter(item => item !== job);
+
+      const jsonJobs1 = JSON.stringify(newJobs1)
+
+      localStorage.setItem('jobs', jsonJobs1)
+
+      return newJobs1;
+    })
+  }
 
   return (
     <div id="wrapper">
@@ -25,7 +55,12 @@ function App() {
         <li 
         key = {index} 
         class="job" 
-        >{job}</li>
+        >
+          {job}
+          <ButtonDelete
+            functionDelete = {() => deleteJob(job)}
+          />
+        </li>
         ))}
       </ul>
     </div>

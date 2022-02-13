@@ -1,0 +1,16 @@
+.button-delete {
+    min-height : 77px;
+    width : 100px;
+    border : none ;
+    border-radius : 10px;
+    background-color : rgba(128, 128, 128, 0.226);
+    font-size : 24px;
+    color : white;
+    font-weight : bold;
+    float : right;
+}
+
+.button-delete:hover {
+    background-color : rgba(128, 128, 128, 0.774);
+    transform: scale(1.1,1.1);
+}
