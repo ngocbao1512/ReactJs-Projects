@@ -11,15 +11,12 @@ function App() {
   });
 
   const handleClick = () => {
-    console.log("ok");
     setJobs(prev => {
       const newJobs = [...prev, job];
 
       const jsonJobs = JSON.stringify(newJobs)
 
       localStorage.setItem('jobs', jsonJobs)
-
-      console.dir(jsonJobs)
 
       return [...prev, job];
     })
@@ -29,7 +26,6 @@ function App() {
 
   const deleteJob = (job) => {
 
-    console.log("ok");  
     setJobs(prev => {
       const newJobs1 = prev.filter(item => item !== job);
 

@@ -33,7 +33,7 @@
 #wrapper {
     min-height : 80vh;
     min-width : 40vw;
-    background-image : linear-gradient(225deg,rgba(226, 116, 220, 0.342),rgba(151, 83, 172, 0.281),rgba(219, 138, 62, 0.486));
+    background-image : linear-gradient(225deg,rgba(226, 116, 220, 0.336),rgba(151, 83, 172, 0.281),rgba(219, 138, 62, 0.486));
     border-radius :  25px;  
 }
 
