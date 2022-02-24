@@ -1,7 +1,6 @@
 .sidebar {
     flex: 3;
     height: calc(100vh - 50px);
-    border-color: yellowgreen;
     overflow-y : scroll;
 }
 

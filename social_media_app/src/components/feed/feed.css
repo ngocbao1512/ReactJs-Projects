@@ -1,5 +1,10 @@
 .feed {
     flex: 5.5;
+    overflow-y: scroll;
+}
+
+.feed::-webkit-scrollbar { 
+    width: 0 !important;
 }
 
 .feedWrapper {
